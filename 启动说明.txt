@@ -1,0 +1,54 @@
+🚀 蔚蓝档案抽卡机器人 - 快速启动指南
+
+📋 部署步骤：
+
+1️⃣ 创建Google Apps Script项目
+   - 访问 https://script.google.com/
+   - 点击"新建项目"
+   - 重命名为"蔚蓝档案抽卡机器人"
+
+2️⃣ 配置机器人
+   - 将code.gs的内容复制到编辑器中
+   - 修改第3-4行的配置：
+     * BOT_TOKEN = '你的机器人Token'
+     * CHANNEL_ID = '你的频道ID'（以-100开头）
+
+3️⃣ 部署Web应用
+   - 点击"部署" → "新建部署"
+   - 类型选择"Web应用"
+   - 访问权限选择"任何人"
+   - 点击"部署"并复制URL
+
+4️⃣ 设置Webhook
+   - 在编辑器中运行setWebhook函数
+   - 或手动访问：https://api.telegram.org/bot<TOKEN>/setWebhook?url=<URL>
+
+5️⃣ 测试机器人
+   - 运行runFullTest函数
+   - 在Telegram中发送/start测试
+
+🔧 主要命令：
+/start - 开始抽卡
+/help - 查看帮助
+/balance - 查看余额
+/gacha - 单抽
+/tenpull - 十连抽
+/sign - 每日签到
+/code <兑换码> - 使用兑换码
+
+🎮 兑换码：
+090828 - 新手码（10000钻石）
+1549550569 - 无限码（100000钻石）
+
+⚠️ 注意事项：
+- 确保机器人已添加到频道
+- 检查Token和频道ID是否正确
+- 定期备份数据
+
+🎯 测试顺序：
+1. testBot() - 测试连接
+2. getWebhookInfo() - 检查Webhook
+3. runFullTest() - 完整测试
+4. 在Telegram中测试功能
+
+如有问题，请查看部署说明.md获取详细帮助！ 
